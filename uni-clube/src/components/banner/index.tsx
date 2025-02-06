@@ -28,7 +28,7 @@ export function Banner(): JSX.Element {
   useEffect(() => {
     const interval = setInterval(() => {
       NextImage();
-    }, 6000);
+    }, 10000);
 
     return () => clearInterval(interval);
   });
@@ -39,12 +39,23 @@ export function Banner(): JSX.Element {
       onMouseEnter={() => setShowChevron(true)}
       onMouseLeave={() => setShowChevron(false)}
     >
-      <Image
-        src={images[currentIndex]}
-        width={1284}
-        height={300}
-        alt="banner"
-      />
+      <div className="w-[98%] overflow-hidden rounded-lg">
+        <div
+          className="flex w-full transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {images.map((image, index) => (
+            <Image
+              key={index}
+              src={image}
+              width={1300}
+              height={300}
+              alt="banner"
+              className="flex-shrink-0 w-full"
+            />
+          ))}
+        </div>
+      </div>
 
       <div
         className={`absolute inset-0 flex justify-between items-center px-4 transition-opacity duration-500 ease-in-out ${

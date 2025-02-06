@@ -38,22 +38,24 @@ export function Banner(): JSX.Element {
         alt="banner"
       />
 
-      {showChevron && (
-        <>
-          <button
-            onClick={previousImage}
-            className="absolute left-0  flex justify-center items-center rounded-full p-2 bg-[#F47920] w-[28px] h-[63px]"
-          >
-            <FaChevronLeft color="white" />
-          </button>
-          <button
-            onClick={NextImage}
-            className="absolute right-0  flex justify-center items-center rounded-full p-2 bg-[#F47920] w-[28px] h-[63px]"
-          >
-            <FaChevronRight color="white" />
-          </button>{" "}
-        </>
-      )}
+      <div
+        className={`absolute inset-0 flex justify-between items-center px-4 transition-opacity duration-500 ease-in-out ${
+          showChevron ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <button
+          onClick={previousImage}
+          className="flex absolute left-0 justify-center items-center rounded-full p-2 bg-[#F47920] w-[28px] h-[63px]"
+        >
+          <FaChevronLeft color="white" />
+        </button>
+        <button
+          onClick={NextImage}
+          className="flex absolute right-0 justify-center items-center rounded-full p-2 bg-[#F47920] w-[28px] h-[63px]"
+        >
+          <FaChevronRight color="white" />
+        </button>
+      </div>
     </div>
   );
 }

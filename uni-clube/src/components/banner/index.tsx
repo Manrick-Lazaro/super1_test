@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, JSX } from "react";
+import { useState, JSX, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export function Banner(): JSX.Element {
@@ -24,6 +24,14 @@ export function Banner(): JSX.Element {
       setCurrentIndex(currentIndex - 1);
     }
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      NextImage();
+    }, 6000);
+
+    return () => clearInterval(interval);
+  });
 
   return (
     <div

@@ -149,7 +149,6 @@ export function DepartamentBanner(): JSX.Element {
             sizeIcon={46}
             size={96}
             title="Serviços"
-            bgColor="#EAE0D5"
           />
         </SwiperSlide>
       </Swiper>

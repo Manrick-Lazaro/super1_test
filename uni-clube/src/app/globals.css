@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.wrapper {
+  @apply w-[90%] max-w-[1320px];
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

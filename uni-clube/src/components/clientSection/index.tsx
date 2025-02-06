@@ -11,7 +11,7 @@ export function ClientSection(): JSX.Element {
         >
           <section className="flex flex-col py-[40px] px-[50px] rounded-md">
             <h1 className="text-white text-[30px] mb-[30px]">
-              Descontos cliente <span className="bold">Unimed Natal</span>
+              Descontos cliente <span className="font-bold">Unimed Natal</span>
             </h1>
             <div className="grid grid-cols-1 700:grid-cols-2 900:grid-cols-3 1200:grid-cols-4 1400:grid-cols-5 gap-4 ">
               <div className="col-span-1">

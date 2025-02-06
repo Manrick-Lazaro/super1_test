@@ -7,30 +7,13 @@ import { BiUser } from "react-icons/bi";
 import { LuShoppingCart } from "react-icons/lu";
 
 import { Input } from "../input";
-import { CircleButton } from "../circleButton";
 import { NavBar } from "../navbar";
 
 export function Header(): JSX.Element {
   const [search, setSearch] = useState("");
-  const textCep = (
-    <p className="text-left leading-[18px]">
-      <span className="font-semibold">Onde</span>
-      <br />
-      você está?
-    </p>
-  );
-  const textLogin = (
-    <p className="text-left leading-[18px]">
-      <span className="font-semibold">Faça Login</span>
-      <br />
-      ou cadastre-se
-    </p>
-  );
-
-  function cepActionButton(): void {}
 
   return (
-    <div>
+    <div className="sticky top-0 z-50 ">
       <div className="h-[8px] w-full bg-[#F47920]"></div>
       <header>
         <div className="h-[122px] flex justify-center items-center bg-[#EAE0D5]">
@@ -43,6 +26,7 @@ export function Header(): JSX.Element {
                 width={220}
               />
             </div>
+
             <div className="flex justify-center items-center h-24 max-w-[620px] w-[620px]">
               <Input
                 name="pesquisa"
@@ -51,37 +35,56 @@ export function Header(): JSX.Element {
                 value={search}
               />
             </div>
-            <div className="flex justify-center items-center h-24">
-              <CircleButton
-                icon={FiMapPin}
-                sizeIcon={20}
-                size={36}
-                text={textCep}
-                onClick={cepActionButton}
-                bgColor="#F7F3EE"
-                colorIcon="#F47920"
-              />
-            </div>
-            <div className="flex justify-center items-center h-24">
-              <CircleButton
-                icon={BiUser}
-                sizeIcon={20}
-                size={36}
-                text={textLogin}
-                onClick={cepActionButton}
-                bgColor="#F7F3EE"
-                colorIcon="#F47920"
-              />
-            </div>
-            <div className="flex justify-center items-center h-24">
-              <CircleButton
-                icon={LuShoppingCart}
-                sizeIcon={20}
-                size={36}
-                onClick={cepActionButton}
-                bgColor="#F7F3EE"
-                colorIcon="#F47920"
-              />
+
+            <div className="flex justify-center items-center h-24 gap-[30px]">
+              <div className="flex flex-row cursor-pointer justify-center items-center gap-[5px] group">
+                <div
+                  className={`rounded-full  flex items-center justify-center max-w-[36px] max-h-[36px] cursor-pointer bg-[#F7F3EE] group-hover:bg-[#F47920] transition-colors duration-300`}
+                >
+                  <div className="w-14 h-14 flex items-center justify-center">
+                    <FiMapPin
+                      className="text-[#F47920] group-hover:text-white transition-colors duration-300"
+                      size={20}
+                    />
+                  </div>
+                </div>
+                <p className="leading-[18px]">
+                  <span className="font-semibold">Onde</span>
+                  <br />
+                  você está
+                </p>
+              </div>
+
+              <div className="flex flex-row cursor-pointer justify-center items-center gap-[5px] group">
+                <div
+                  className={`rounded-full  flex items-center justify-center w-[36px] h-[36px] cursor-pointer bg-[#F7F3EE] group-hover:bg-[#F47920] transition-colors duration-300`}
+                >
+                  <div className="w-14 h-14 flex items-center justify-center">
+                    <BiUser
+                      className="text-[#F47920] group-hover:text-white transition-colors duration-300"
+                      size={20}
+                    />
+                  </div>
+                </div>
+                <p className="leading-[18px]">
+                  <span className="font-semibold">Faça Login</span>
+                  <br />
+                  ou cadastre-se
+                </p>
+              </div>
+
+              <div className="flex flex-row cursor-pointer justify-center items-center gap-[5px] group">
+                <div
+                  className={`rounded-full  flex items-center justify-center w-[36px] h-[36px] cursor-pointer bg-[#F7F3EE] group-hover:bg-[#F47920] transition-colors duration-300`}
+                >
+                  <div className="w-14 h-14 flex items-center justify-center">
+                    <LuShoppingCart
+                      className="text-[#F47920] group-hover:text-white transition-colors duration-300"
+                      size={20}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

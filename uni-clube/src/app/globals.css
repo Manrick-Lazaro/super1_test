@@ -5,7 +5,12 @@
 @tailwind utilities;
 
 .wrapper {
-  @apply w-[90%] max-w-[1320px];
+  @apply w-[70%] m-auto max-w-[1320px];
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {

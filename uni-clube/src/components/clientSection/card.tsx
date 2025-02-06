@@ -2,7 +2,7 @@ import { JSX } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { cardProps } from "@/types/components/cardProps";
+import { cardProps } from "@/types/components/card";
 import { PriceLocale } from "@/utils/functions/priceLocale";
 
 export function Card({

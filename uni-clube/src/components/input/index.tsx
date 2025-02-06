@@ -1,6 +1,6 @@
 "use client";
 
-import type InputProps from "../../types/components/inputProps";
+import type InputProps from "../../types/components/input";
 import { JSX } from "react";
 import { IoSearch } from "react-icons/io5";
 

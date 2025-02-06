@@ -13,6 +13,7 @@ export function ClientSection(): JSX.Element {
             <h1 className="text-white text-[30px] mb-[30px]">
               Descontos cliente <span className="font-bold">Unimed Natal</span>
             </h1>
+
             <div className="grid grid-cols-1 700:grid-cols-2 900:grid-cols-3 1200:grid-cols-4 1400:grid-cols-5 gap-4 ">
               <div className="col-span-1">
                 <Card
@@ -27,56 +28,57 @@ export function ClientSection(): JSX.Element {
                   seller="Sr. Castanha"
                 />
               </div>
+
               <div className="col-span-1">
                 <Card
-                  image={"/images/artesanato-potiguar 1.png"}
-                  tittle="Garrafa de areia colorida"
-                  promotion={{ oldPrice: 32.99, promotionValue: 10 }}
-                  price={29.61}
+                  image={"/images/csm_artesanato1_01_abb2c534a4 1.png"}
+                  tittle="Bolsas variadas de fibra de Açaí"
+                  price={49.9}
                   description={{
-                    creditCard: { installment: 3, value: 6.33 },
-                    pix: 18.5,
+                    creditCard: { installment: 2, value: 24.95 },
+                    pix: 38.5,
                   }}
-                  seller="Sr. Castanha"
+                  seller="Patrícia Arte"
                 />
               </div>
+
               <div className="col-span-1">
                 <Card
-                  image={"/images/artesanato-potiguar 1.png"}
-                  tittle="Garrafa de areia colorida"
+                  image={"/images/23e81a3aa263874c983c96c7cbae3468 1.png"}
+                  tittle="Galinha e pintinhos de barro a mão"
                   promotion={{ oldPrice: 32.99, promotionValue: 10 }}
-                  price={29.61}
+                  price={14.9}
                   description={{
-                    creditCard: { installment: 3, value: 6.33 },
-                    pix: 18.5,
+                    pix: 13.0,
                   }}
-                  seller="Sr. Castanha"
+                  seller="Patrícia Arte"
                 />
               </div>
+
               <div className="col-span-1">
                 <Card
-                  image={"/images/artesanato-potiguar 1.png"}
-                  tittle="Garrafa de areia colorida"
-                  promotion={{ oldPrice: 32.99, promotionValue: 10 }}
-                  price={29.61}
+                  image={"/images/foto11 1.png"}
+                  tittle="Panelas de barro de São Gonçado do Amarante"
+                  price={29.9}
                   description={{
-                    creditCard: { installment: 3, value: 6.33 },
-                    pix: 18.5,
+                    creditCard: { installment: 2, value: 16.95 },
+                    pix: 23.9,
                   }}
-                  seller="Sr. Castanha"
+                  seller="Sebastião Salgado"
                 />
               </div>
+
               <div className="col-span-1">
                 <Card
-                  image={"/images/artesanato-potiguar 1.png"}
-                  tittle="Garrafa de areia colorida"
-                  promotion={{ oldPrice: 32.99, promotionValue: 10 }}
-                  price={29.61}
+                  image={
+                    "/images/original-546f2c52e986cd7f11f4935c98ba29d3 1.png"
+                  }
+                  tittle="Artesanato de bonecas negras feitas com argila a mão"
+                  price={9.9}
                   description={{
-                    creditCard: { installment: 3, value: 6.33 },
-                    pix: 18.5,
+                    creditCard: { installment: 2, value: 7.45 },
                   }}
-                  seller="Sr. Castanha"
+                  seller="Manu Instimates"
                 />
               </div>
             </div>

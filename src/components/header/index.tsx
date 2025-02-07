@@ -33,7 +33,7 @@ export function Header(): JSX.Element {
           <div className="wrapper flex flex-row justify-evenly items-center gap-[30px]">
             <div className="flex justify-center items-center h-24">
               <Image
-                alt="Logo dae Uniclube"
+                alt="Logo da Uniclube"
                 src="/images/Logo.png"
                 height={100}
                 width={220}

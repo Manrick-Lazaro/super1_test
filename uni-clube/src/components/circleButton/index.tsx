@@ -17,11 +17,11 @@ export function CircleButton({
     >
       <div className="flex flex-row justify-center items-center gap-[5px]">
         <div
-          className={`rounded-full flex items-center justify-center w-[${
-            size ? { size } : "60"
-          }px] h-[${
-            size ? size : "60"
-          }px] 990:w-[96px] 990:h-[96px] bg-[#EAE0D5] hover:bg-[#F47920] transition-colors duration-300`}
+          className={`rounded-full flex items-center justify-center 990:w-[96px] 990:h-[96px] bg-[#EAE0D5] hover:bg-[#F47920] transition-colors duration-300`}
+          style={{
+            width: size !== undefined ? size : 60,
+            height: size !== undefined ? size : 60,
+          }}
         >
           {Icon && (
             <div className="group w-24 h-24 flex items-center justify-center">

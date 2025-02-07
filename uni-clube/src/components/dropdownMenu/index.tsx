@@ -2,6 +2,8 @@
 
 import { JSX, useState, useEffect } from "react";
 import { ExpandableList } from "../expandableList";
+import { MdHomeRepairService } from "react-icons/md";
+
 import {
   linksSaude,
   linksEstilo,
@@ -59,6 +61,82 @@ export function DropdownMenu({ isOpen, onClose }: Props): JSX.Element {
                 items={linksDepartamentos}
                 title="Mais Departamentos"
               />
+            </div>
+          </div>
+          <div className="flex justify-center bg-[#FAF7F4] w-full h-[218px] p-0  ">
+            <div className="max-w-[95%] w-full flex justify-start pt-12 flex-row overflow-x-auto whitespace-nowrap">
+              <div className="">
+                <CircleButton
+                  onClick={() => {}}
+                  icon={MdHomeRepairService}
+                  sizeIcon={20}
+                  size={90}
+                  title="tittle here"
+                />
+              </div>
+              <div className="">
+                <CircleButton
+                  onClick={() => {}}
+                  icon={MdHomeRepairService}
+                  sizeIcon={20}
+                  size={90}
+                  title="tittle here"
+                />
+              </div>
+              <div className="">
+                <CircleButton
+                  onClick={() => {}}
+                  icon={MdHomeRepairService}
+                  sizeIcon={20}
+                  size={90}
+                  title="tittle here"
+                />
+              </div>
+              <div className="">
+                <CircleButton
+                  onClick={() => {}}
+                  icon={MdHomeRepairService}
+                  sizeIcon={20}
+                  size={90}
+                  title="tittle here"
+                />
+              </div>
+              <div className="">
+                <CircleButton
+                  onClick={() => {}}
+                  icon={MdHomeRepairService}
+                  sizeIcon={20}
+                  size={90}
+                  title="tittle here"
+                />
+              </div>
+              <div className="">
+                <CircleButton
+                  onClick={() => {}}
+                  icon={MdHomeRepairService}
+                  sizeIcon={20}
+                  size={90}
+                  title="tittle here"
+                />
+              </div>
+              <div className="">
+                <CircleButton
+                  onClick={() => {}}
+                  icon={MdHomeRepairService}
+                  sizeIcon={20}
+                  size={90}
+                  title="tittle here"
+                />
+              </div>
+              <div className="">
+                <CircleButton
+                  onClick={() => {}}
+                  icon={MdHomeRepairService}
+                  sizeIcon={20}
+                  size={90}
+                  title="tittle here"
+                />
+              </div>
             </div>
           </div>
         </div>

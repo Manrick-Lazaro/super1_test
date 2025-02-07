@@ -51,7 +51,6 @@ export function DepartamentBanner(): JSX.Element {
             sizeIcon={46}
             size={96}
             title="Arte, Papelaria e Armarinhos"
-            bgColor="#EAE0D5"
           />
         </SwiperSlide>
 
@@ -62,7 +61,6 @@ export function DepartamentBanner(): JSX.Element {
             sizeIcon={46}
             size={96}
             title="Saúde"
-            bgColor="#EAE0D5"
           />
         </SwiperSlide>
 
@@ -73,7 +71,6 @@ export function DepartamentBanner(): JSX.Element {
             sizeIcon={46}
             size={96}
             title="Calçados, Roupas e Bolsas"
-            bgColor="#EAE0D5"
           />
         </SwiperSlide>
 
@@ -84,7 +81,6 @@ export function DepartamentBanner(): JSX.Element {
             sizeIcon={46}
             size={96}
             title="Bebês"
-            bgColor="#EAE0D5"
           />
         </SwiperSlide>
 
@@ -95,7 +91,6 @@ export function DepartamentBanner(): JSX.Element {
             sizeIcon={46}
             size={96}
             title="Casa, Móveis e Decoração"
-            bgColor="#EAE0D5"
           />
         </SwiperSlide>
 
@@ -106,7 +101,6 @@ export function DepartamentBanner(): JSX.Element {
             sizeIcon={46}
             size={96}
             title="Esportes e Fitness"
-            bgColor="#EAE0D5"
           />
         </SwiperSlide>
 
@@ -117,7 +111,6 @@ export function DepartamentBanner(): JSX.Element {
             sizeIcon={46}
             size={96}
             title="Beleza e Cuidado Pessoal"
-            bgColor="#EAE0D5"
           />
         </SwiperSlide>
 
@@ -128,7 +121,6 @@ export function DepartamentBanner(): JSX.Element {
             sizeIcon={46}
             size={96}
             title="Imóveis"
-            bgColor="#EAE0D5"
           />
         </SwiperSlide>
 
@@ -139,7 +131,6 @@ export function DepartamentBanner(): JSX.Element {
             sizeIcon={46}
             size={96}
             title="Óculos"
-            bgColor="#EAE0D5"
           />
         </SwiperSlide>
 

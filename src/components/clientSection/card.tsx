@@ -23,7 +23,7 @@ export function Card({
         className="transition duration-500 hover:brightness-50"
       />
 
-      <div className="px-4 py-4 flex flex-col justify-end bg-blue-200">
+      <div className="px-4 py-4 flex flex-col justify-end">
         {tittle !== undefined ? (
           <h1 className="text-[#3F3F3F] text-sm 990:text-lg h-[60px] mb-1 overflow-hidden text-ellipsis ">
             {tittle}

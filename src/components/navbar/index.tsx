@@ -1,16 +1,28 @@
 "use client";
 
 import Image from "next/image";
-import { useState, JSX } from "react";
+import { useState, JSX, useEffect } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import { DropdownMenu } from "../dropdownMenu";
 
 export function NavBar(): JSX.Element {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   function toggleMenu(): void {
     setMenuIsOpen(!menuIsOpen);
   }
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1000);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   return (
     <>
@@ -21,16 +33,21 @@ export function NavBar(): JSX.Element {
           aria-label="Menu"
         >
           <Image src="/svg/icons/menu.svg" alt="Menu" width={19} height={13} />
-          <p className="bold text-[#3F3F3F] ml-[10px] mr-[8px]">
-            Departamentos
-          </p>
-          {menuIsOpen ? (
-            <FaChevronUp className="w-7 h-13 text-[#F47920]" />
+          {isMobile === false ? (
+            <>
+              <p className="bold text-[#3F3F3F] ml-[10px] mr-[8px]">
+                Departamentos
+              </p>
+              {menuIsOpen ? (
+                <FaChevronUp className="w-7 h-13 text-[#F47920]" />
+              ) : (
+                <FaChevronDown className="w-7 h-13 text-[#F47920]" />
+              )}
+            </>
           ) : (
-            <FaChevronDown className="w-7 h-13 text-[#F47920]" />
+            <></>
           )}
         </button>
-        <div className="border-r-[2px] border-[#EAE0D5] mx-4 rounded-full w-1 h-[30px]"></div>
       </nav>
 
       <DropdownMenu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />

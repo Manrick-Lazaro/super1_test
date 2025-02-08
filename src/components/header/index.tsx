@@ -32,7 +32,7 @@ export function Header(): JSX.Element {
         {isMobile === false ? (
           <>
             <div className="h-[122px] flex justify-center items-center bg-[#EAE0D5]">
-              <div className="wrapper flex flex-row justify-evenly items-center gap-[30px]">
+              <div className="w-[90%] 700:w-[70%] 700:max-w-[1320px] flex flex-row justify-between items-center gap-5">
                 <div className="flex justify-center items-center h-24">
                   <Image
                     alt="Logo da Uniclube"
@@ -42,7 +42,7 @@ export function Header(): JSX.Element {
                   />
                 </div>
 
-                <div className="flex justify-center items-center h-24 max-w-[620px] w-[620px]">
+                <div className="flex justify-center items-center h-24 w-full max-w-[53%]">
                   <Input
                     name="pesquisa"
                     placeholder="O que você gostaria hoje?"
@@ -51,7 +51,7 @@ export function Header(): JSX.Element {
                   />
                 </div>
 
-                <div className="flex justify-center items-center h-24 gap-[20px] 700:gap-[30px] min-w-72">
+                <div className="flex justify-center items-center h-24 gap-[10px] 700:gap-[20px] min-w-72">
                   <div className="flex flex-row cursor-pointer justify-center items-center gap-[5px] group">
                     <div
                       className={`rounded-full  flex items-center justify-center max-w-[36px] max-h-[36px] cursor-pointer bg-[#F7F3EE] group-hover:bg-[#F47920] transition-colors duration-300`}
@@ -63,7 +63,7 @@ export function Header(): JSX.Element {
                         />
                       </div>
                     </div>
-                    <p className="leading-[18px] whitespace-nowrap">
+                    <p className="leading-[18px]">
                       <span className="font-semibold">Onde</span>
                       <br />
                       você está
@@ -81,7 +81,7 @@ export function Header(): JSX.Element {
                         />
                       </div>
                     </div>
-                    <p className="leading-[18px] whitespace-nowrap">
+                    <p className="leading-[18px]">
                       <span className="font-semibold">Faça Login</span>
                       <br />
                       ou cadastre-se

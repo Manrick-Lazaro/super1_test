@@ -35,7 +35,7 @@ export function CircleButton({
           )}
         </div>
       </div>
-      <p className="text-[#737373] text-center 400:text-400 700:text-700 990:text-990">
+      <p className="text-[#737373] text-center text-xs 700:text-base">
         {title !== undefined ? <>{title}</> : <></>}
       </p>
     </button>

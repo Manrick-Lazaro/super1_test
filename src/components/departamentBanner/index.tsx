@@ -47,7 +47,7 @@ export function DepartamentBanner(): JSX.Element {
             slidesPerView: 2,
             spaceBetween: 1,
           },
-          400: {
+          300: {
             slidesPerView: 3,
             spaceBetween: 1,
           },

@@ -13,7 +13,7 @@ export function CircleButton({
   return (
     <button
       onClick={onClick}
-      className="flex flex-col justify-start items-center gap-[7px] w-[120px] h-[160px] overflow-hidden 700:w-btn-700 700:h-btn-700 990:w-btn-990 990:h-btn-990 1200:w-btn-1200 1200:h-btn-1200 1400:w-btn-1400 1400:h-btn-1400"
+      className="flex flex-col justify-start items-center gap-[7px] w-[120px] min-h-[100px] overflow-hidden 700:w-btn-700 700:h-btn-700 990:w-btn-990 990:h-btn-990 1200:w-btn-1200 1200:h-btn-1200 1400:w-btn-1400 1400:h-btn-1400"
     >
       <div className="flex flex-row justify-center items-center gap-[5px]">
         <div

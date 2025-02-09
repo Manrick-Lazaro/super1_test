@@ -6,6 +6,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export function Banner(): JSX.Element {
   const images = ["/images/banner1.png", "/images/banner2.png"];
+  const imagesMobile = ["/images/bannerMobi01.jpg", "/images/bannerMobi02.jpg"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showChevron, setShowChevron] = useState(false);
 
@@ -33,6 +34,19 @@ export function Banner(): JSX.Element {
     return () => clearInterval(interval);
   });
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1000);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <div
       className="relative flex items-center justify-center w-full h-300 overflow-hidden rounded-lg"
@@ -44,16 +58,33 @@ export function Banner(): JSX.Element {
           className="flex w-full transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {images.map((image, index) => (
-            <Image
-              key={index}
-              src={image}
-              width={1300}
-              height={300}
-              alt="banner"
-              className="flex-shrink-0 w-full"
-            />
-          ))}
+          {!isMobile ? (
+            <>
+              {images.map((image, index) => (
+                <Image
+                  key={index}
+                  src={image}
+                  width={1300}
+                  height={300}
+                  alt="banner"
+                  className="flex-shrink-0 w-full"
+                />
+              ))}
+            </>
+          ) : (
+            <>
+              {imagesMobile.map((image, index) => (
+                <Image
+                  key={index}
+                  src={image}
+                  width={664}
+                  height={420}
+                  alt="banner"
+                  className="flex-shrink-0 w-full"
+                />
+              ))}
+            </>
+          )}
         </div>
       </div>
 

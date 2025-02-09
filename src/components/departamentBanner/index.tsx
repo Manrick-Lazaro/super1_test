@@ -1,5 +1,6 @@
-import { JSX } from "react";
-import { CircleButton } from "../circleButton";
+"use client";
+
+import { JSX, useState, useEffect } from "react";
 import { BiBookBookmark } from "react-icons/bi";
 import {
   PiHeartbeatThin,
@@ -7,32 +8,60 @@ import {
   PiBabyThin,
   PiSunglassesThin,
 } from "react-icons/pi";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { RiSofaLine } from "react-icons/ri";
 import { LiaDumbbellSolid, LiaKeySolid } from "react-icons/lia";
 import { GiMirrorMirror } from "react-icons/gi";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 
+import { CircleButton } from "../circleButton";
+
 export function DepartamentBanner(): JSX.Element {
+  const [size, setSize] = useState(96);
+  const [iconSize, setIconSize] = useState(46);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      if (window.innerWidth < 1000) {
+        setSize(60);
+        setIconSize(26);
+      } else {
+        setSize(90);
+        setIconSize(46);
+      }
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <div className="w-full">
       <Swiper
         spaceBetween={10}
         slidesPerView={10}
         breakpoints={{
+          50: {
+            slidesPerView: 2,
+            spaceBetween: 1,
+          },
           400: {
             slidesPerView: 3,
+            spaceBetween: 1,
+          },
+          500: {
+            slidesPerView: 4,
             spaceBetween: 2,
           },
           640: {
             slidesPerView: 5,
-            spaceBetween: 3,
+            spaceBetween: 2,
           },
           768: {
             slidesPerView: 6,
-            spaceBetween: 6,
+            spaceBetween: 5,
           },
           1300: {
             slidesPerView: 7,
@@ -48,8 +77,8 @@ export function DepartamentBanner(): JSX.Element {
           <CircleButton
             onClick={() => {}}
             icon={BiBookBookmark}
-            sizeIcon={46}
-            size={96}
+            sizeIcon={iconSize}
+            size={size}
             title="Arte, Papelaria e Armarinhos"
           />
         </SwiperSlide>
@@ -58,8 +87,8 @@ export function DepartamentBanner(): JSX.Element {
           <CircleButton
             onClick={() => {}}
             icon={PiHeartbeatThin}
-            sizeIcon={46}
-            size={96}
+            sizeIcon={iconSize}
+            size={size}
             title="Saúde"
           />
         </SwiperSlide>
@@ -68,8 +97,8 @@ export function DepartamentBanner(): JSX.Element {
           <CircleButton
             onClick={() => {}}
             icon={PiTShirtThin}
-            sizeIcon={46}
-            size={96}
+            sizeIcon={iconSize}
+            size={size}
             title="Calçados, Roupas e Bolsas"
           />
         </SwiperSlide>
@@ -78,8 +107,8 @@ export function DepartamentBanner(): JSX.Element {
           <CircleButton
             onClick={() => {}}
             icon={PiBabyThin}
-            sizeIcon={46}
-            size={96}
+            sizeIcon={iconSize}
+            size={size}
             title="Bebês"
           />
         </SwiperSlide>
@@ -88,8 +117,8 @@ export function DepartamentBanner(): JSX.Element {
           <CircleButton
             onClick={() => {}}
             icon={RiSofaLine}
-            sizeIcon={46}
-            size={96}
+            sizeIcon={iconSize}
+            size={size}
             title="Casa, Móveis e Decoração"
           />
         </SwiperSlide>
@@ -98,8 +127,8 @@ export function DepartamentBanner(): JSX.Element {
           <CircleButton
             onClick={() => {}}
             icon={LiaDumbbellSolid}
-            sizeIcon={46}
-            size={96}
+            sizeIcon={iconSize}
+            size={size}
             title="Esportes e Fitness"
           />
         </SwiperSlide>
@@ -108,8 +137,8 @@ export function DepartamentBanner(): JSX.Element {
           <CircleButton
             onClick={() => {}}
             icon={GiMirrorMirror}
-            sizeIcon={46}
-            size={96}
+            sizeIcon={iconSize}
+            size={size}
             title="Beleza e Cuidado Pessoal"
           />
         </SwiperSlide>
@@ -118,8 +147,8 @@ export function DepartamentBanner(): JSX.Element {
           <CircleButton
             onClick={() => {}}
             icon={LiaKeySolid}
-            sizeIcon={46}
-            size={96}
+            sizeIcon={iconSize}
+            size={size}
             title="Imóveis"
           />
         </SwiperSlide>
@@ -128,8 +157,8 @@ export function DepartamentBanner(): JSX.Element {
           <CircleButton
             onClick={() => {}}
             icon={PiSunglassesThin}
-            sizeIcon={46}
-            size={96}
+            sizeIcon={iconSize}
+            size={size}
             title="Óculos"
           />
         </SwiperSlide>
@@ -137,8 +166,8 @@ export function DepartamentBanner(): JSX.Element {
         <SwiperSlide>
           <CircleButton
             onClick={() => {}}
-            sizeIcon={46}
-            size={96}
+            sizeIcon={iconSize}
+            size={size}
             title="Serviços"
           />
         </SwiperSlide>

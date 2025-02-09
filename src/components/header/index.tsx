@@ -107,6 +107,7 @@ export function Header(): JSX.Element {
               <div className="wrapper flex flex-row items-center justify-between px-4 h-full mx-[279px]">
                 <div className="flex flex-row items-center">
                   <NavBar />
+                  <div className="border-r-[2px] border-[#EAE0D5] mx-4 rounded-full w-1 h-[30px]"></div>
                   <p className="text-[#3F3F3F]">
                     Descontos Clienter United Natal
                   </p>

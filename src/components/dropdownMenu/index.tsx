@@ -40,8 +40,10 @@ export function DropdownMenu({ isOpen, onClose }: Props): JSX.Element {
 
   return isOpen ? (
     <div
-      className={`fixed inset-0 top-[190px] z-30 bg-black bg-opacity-50 transition-all ${
-        isMobile ? "flex justify-start" : "flex items-start justify-center"
+      className={`fixed inset-0  z-30 bg-black bg-opacity-50 transition-all ${
+        isMobile
+          ? "flex justify-start top-[110px]"
+          : "flex items-start justify-center top-[190px]"
       }`}
       onClick={handleClickOnScrim}
     >
